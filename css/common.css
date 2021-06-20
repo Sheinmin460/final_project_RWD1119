@@ -188,11 +188,9 @@ li {
 .card{
     width: 250px;
     height: auto;
-    border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color:#FEB326 ;
     margin: 30px 10px;
     transform: scale(1);
 }
@@ -210,5 +208,16 @@ li {
 .card-body{
     text-align: center;
     font-family:'Roboto','Poppins', sans-serif;
-    line-height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:#FEB326 ;
+    border-bottom-left-radius:15px ;
+    border-bottom-right-radius:15px ;
+    height: 90px;
+}
+
+.card-text2{
+    font-size: 20px;
+    font-weight: 900;
 }
