@@ -60,11 +60,46 @@ let productData = [
     
 ]
 
+
+const featuredProducts= document.getElementsByClassName('featured_products')[0];//get parent section
+
+const addProdcts=(arry,length,parentSection)=>{
+    for (let i = 0; i < length; i++) {
+        //creating product item
+        const productItemContainer = document.createElement("div");
+        productItemContainer.id=arry[i].id;
+        productItemContainer.classList.add("card");
+    
+        const productImage = document.createElement("img");
+        productImage.src = arry[i].image;
+        productImage.classList.add("card-img-top");
+    
+        const productBody = document.createElement("div");
+        productBody.classList.add("card-body");
+    
+        const productName = document.createElement("h2");
+        productName.innerHTML=arry[i].name;
+        productName.classList.add("card-text1")
+    
+        const productPrice = document.createElement("p")
+        productPrice.innerHTML=arry[i].price+"$";
+        productPrice.classList.add("card-text2") 
+    
+        productBody.appendChild(productName);
+        productBody.appendChild(productPrice)
+        productItemContainer.appendChild(productImage);
+        productItemContainer.appendChild(productBody)
+        parentSection.appendChild(productItemContainer);
+    }
+}
+
+addProdcts(productData,8,featuredProducts)
+
 const inputValue = document.getElementsByClassName(
     'searchProducts'
 )[0]
 
-const productContainer = document.getElementsByClassName('product_container')[0];
+const productContainer = document.getElementsByClassName('product_container')[0];//get parent section
 
 inputValue.addEventListener("keyup",(event) =>{
     productContainer.innerHTML="";
@@ -79,32 +114,6 @@ inputValue.addEventListener("keyup",(event) =>{
 
     const hasProductsToShow = filteredProducts.length>0;//to check have any product to show or not
     if (hasProductsToShow===true){
-        for (let i = 0; i < filteredProducts.length; i++) {
-            //creating product item
-            const productItemContainer = document.createElement("div");
-            productItemContainer.id=filteredProducts[i].id;
-            productItemContainer.classList.add("card");
-
-            const productImage = document.createElement("img");
-            productImage.src = filteredProducts[i].image;
-            productImage.classList.add("card-img-top");
-
-            const productBody = document.createElement("div");
-            productBody.classList.add("card-body");
-
-            const productName = document.createElement("h2");
-            productName.innerHTML=filteredProducts[i].name;
-            productName.classList.add("card-text1")
-
-            const productPrice = document.createElement("p")
-            productPrice.innerHTML=filteredProducts[i].price+"$";
-            productPrice.classList.add("card-text2") 
-
-            productBody.appendChild(productName);
-            productBody.appendChild(productPrice)
-            productItemContainer.appendChild(productImage);
-            productItemContainer.appendChild(productBody)
-            productContainer.appendChild(productItemContainer);
-        }
+        addProdcts(filteredProducts,filteredProducts.length,productContainer)
     }
 });
