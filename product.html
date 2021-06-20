@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/product.css">
+    <title>Products</title>
+</head>
+<body>
+    <!--for header-->
+    <header class="header">
+        <div class="logocontainer">
+            <img src="image/logo/logo_for_screen_1300px.png" alt="logo" class="logo_for_1300px">
+            <img src="image/logo/logo_for_screen_600px.png" alt="logo" class="logo_for_600px">
+        </div>
+        <nav class="menu_container">
+            <ul class="menu">
+                <li><a href="home_page.html" class="menu_item">Home</a></li>
+                <li><a href="login.html" class="menu_item">Profile</a></li>
+                <li><a href="product.html" class="menu_item">Products</a></li>
+            </ul>
+            <img src="image/common/menu.png" alt="menu" id="toggleIcon" onclick="menuToggle()" class="menu2" >
+            <div id="menu_overlay">
+                <ul>
+                    <li><a href="home_page.html" >Home</a></li>
+                    <li><a href="login.html" >Profile</a></li>
+                    <li><a href="product.html" >Products</a></li>
+                </ul>
+            </div>
+    </header>
+    <!--for sarch bar-->
+    <div class="search_bar">
+        <input type="text" class="searchProducts" placeholder="Search Products">
+    </div>
+    <!--for show products-->
+    <section class="product_container">
+
+    </section>
+
+    <script src="js/common.js" ></script>
+    <script src="js/product.js"></script>
+</body>
+</html>
