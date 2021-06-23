@@ -9,7 +9,20 @@
     <title>Products</title>
 </head>
 <body>
+    
+    <!--for login-->
+
+    <div class="log_in_page">
+        <div class="error_place">
+            <!--to append error message-->
+        </div>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button id="logInBtn">log in</button>
+    </div>
+
     <!--for header-->
+
     <header class="header">
         <div class="logocontainer">
             <img src="image/logo/logo_for_screen_1300px.png" alt="logo" class="logo_for_1300px">
@@ -18,28 +31,34 @@
         <nav class="menu_container">
             <ul class="menu">
                 <li><a href="home_page.html" class="menu_item">Home</a></li>
-                <li><a href="login.html" class="menu_item">Profile</a></li>
+                <li><a href="profile.html" class="menu_item">Profile</a><span>0</span></li>
                 <li><a href="product.html" class="menu_item">Products</a></li>
             </ul>
             <img src="image/common/menu.png" alt="menu" id="toggleIcon" onclick="menuToggle()" class="menu2" >
             <div id="menu_overlay">
                 <ul>
                     <li><a href="home_page.html" >Home</a></li>
-                    <li><a href="login.html" >Profile</a></li>
+                    <li><a href="profile.html" >Profile</a></li>
                     <li><a href="product.html" >Products</a></li>
                 </ul>
             </div>
     </header>
+
     <!--for sarch bar-->
+
     <div class="search_bar">
         <input type="text" class="searchProducts" placeholder="Search Products">
     </div>
-    <!--for show products-->
-    <section class="product_container">
 
+    <!--for show products-->
+
+    <section class="product_container">
+        <!--to append searched products-->
     </section>
 
+    
     <script src="js/common.js" ></script>
+    <script src="js/login.js" ></script>
     <script src="js/product.js" type="text/javascript"></script>
 </body>
 </html>
