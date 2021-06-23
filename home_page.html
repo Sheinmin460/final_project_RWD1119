@@ -6,12 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="https://kit.fontawesome.com/fc310a5a19.js" crossorigin="anonymous"></script>
     <title>BlackMark Online Shop</title>
 </head>
 <body>
+
+    <!--for login-->
+
+    <div class="log_in_page">
+        <div class="error_place">
+            <!--to append error message-->
+        </div>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button id="logInBtn">log in</button>
+    </div>
+
     <!--for header-->
+
     <header class="header">
         <div class="logocontainer">
             <img src="image/logo/logo_for_screen_1300px.png" alt="logo" class="logo_for_1300px">
@@ -20,20 +34,22 @@
         <nav class="menu_container">
             <ul class="menu">
                 <li><a href="home_page.html" class="menu_item">Home</a></li>
-                <li><a href="login.html" class="menu_item">Profile</a></li>
+                <li><a href="profile.html" class="menu_item">Profile</a><span>0</span></li>
                 <li><a href="product.html" class="menu_item">Products</a></li>
             </ul>
             <img src="image/common/menu.png" alt="menu" id="toggleIcon" onclick="menuToggle()" class="menu2" >
             <div id="menu_overlay">
                 <ul>
                     <li><a href="home_page.html" >Home</a></li>
-                    <li><a href="login.html" >Profile</a></li>
+                    <li><a href="profile.html" >Profile</a></li>
                     <li><a href="product.html" >Products</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
     <!--for banner-->
+
     <div class="banner">
         <section>
             <div class="img_container">
@@ -46,7 +62,9 @@
             <a href="product.html"><button id="banner_btn" >Go shopping</button></a>
         </article>
     </div>
+
     <!--for catagories-->
+
     <section class="catagories_container">
         <div class="catagories_parent">
             <div class="catagories">
@@ -60,15 +78,112 @@
             </div>
         </div>
     </section>
+
     <!--for products-->
+
+    <h2 class="products_header">Featured Products</h2>
     <section class="featured_products">
-     
+        <!--to append products-->
     </section>
+
     <!--For Special Offer-->
+
     <div class="specialoffer_container">
         <img src="image/banner/special_offer.jpg" alt="" class="special_offer_img">
     </div>
+
+    <!--for customer rating-->
+    <h2 class="customer_rating">Customer Rating</h2>
+    <section class="customer_container">
+        <div class="customer">
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+
+            <div>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+
+            <img src="image/common/user (1).png" alt="customer-1" class="customer_img">
+
+            <h2>Username</h2>
+        </div>
+        <div class="customer">
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+
+            <div>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half"></i>
+            </div>
+
+            <img src="image/common/user (2).png" alt="customer-2" class="customer_img">
+
+            <h2>Username</h2>
+        </div>
+        <div class="customer">
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            
+            <div>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half"></i>
+            </div>
+
+            <img src="image/common/user (3).png" alt="customer-3" class="customer_img">
+
+            <h2>Username</h2>
+        </div>
+    </section>
+
+    <!--footer-->
+
+    <div class="footer_container">
+        <div class="row">
+            <section class="footer_colum1">
+                <h3 class="footer_header">DownLoad Our App</h3>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <div class="download">
+                    <img src="image/common/play-store.png" alt="play-store">
+                    <img src="image/common/app-store.png" alt="app-store">
+                </div>
+            </section>
+            <section class="footer_colum2">
+                <img src="image/logo/LogoMakr-7YllMe.png" alt="logo">
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+            </section>
+            <section class="footer_colum3">
+                <h3 class="footer_header">Follow Us</h3>
+                <a href="">Fcebook</a>
+                <a href="">Instergram</a>
+                <a href="">Twitter</a>
+                <a href="">You Tube</a>
+            </section>
+        </div>
+        <div class="footer_line">copyright</div>
+        <p class='copyright'>&copy;17,6,2021.Designed By Shein Min Htet</p>
+    </div>
+
+
+
     <script src="js/common.js" ></script>
+    <script src="js/login.js" ></script>
     <script src="js/home.js" type="text/javascript"></script>
 </body>
 </html>
