@@ -7,5 +7,3 @@ function menuToggle(){
     let nav = document.getElementById('toggleIcons');
     nav.classList.toggle('active');
 }
-
-
