@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0%;
+}
+
+
+/*for profile page*/
+
+.profile_page{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.personal_information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    border-right: solid 1px #000;
+    margin-top: 30px;
+}
+
+.profile_img_container{
+    width: 300px;
+    height: auto;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_img{
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+}
+
+.information{
+    width: 300px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.profile_name{
+    font-size: 35px;
+    font-family: 'Roboto','Poppins', sans-serif;
+}
+
+.profile_info{
+    font-size: 20px;
+    font-family: 'Roboto','Poppins', sans-serif;
+    margin: 15px 0;
+}
+
+@media (max-width:800px) {
+    .personal_information{
+        width: 100%;
+        text-align: center;
+        border-right:none ;
+    }
+    .information{
+        width: 100%;
+        text-align: center;
+    }
+}
