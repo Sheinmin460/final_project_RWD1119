@@ -1,30 +1,3 @@
-let userData = [
-    {
-        username : 'admin1',
-        name : 'Shein Min Htet 1',
-        password : '12345678',
-        email : 'admin1@gmail.com',
-        phone : +959123456789,
-        img : "image/common/user (1).png",
-    },
-    {
-        username : 'admin2',
-        name : 'Shein Min Htet 2',
-        password : '12345678',
-        email : 'admin2@yandex.com',
-        phone : +959364234567,
-        img : "image/common/user (2).png",
-    },
-    {
-        username : 'admin3',
-        name : 'Shein Min Htet 3',
-        password : '12345678',
-        email : 'admin3@gmail.com',
-        phone : +959786548764,
-        img : "image/common/user (3).png",
-    },
-]
-
 const getUserName = document.getElementById('username');
 
 const getUserPassword = document.getElementById('password');
@@ -35,10 +8,27 @@ const logInPage = document.getElementsByClassName('log_in_page')[0];
 
 const errorPlace = document.getElementsByClassName('error_place')[0];
 
-let localStorageUserName = window.localStorage.getItem('Username');
+let localStorageUserName = localStorage.getItem('Username');
 
-let localStoragePassword = window.localStorage.getItem('Password');
+let localStoragePassword = localStorage.getItem('Password');
 
+let errorLogIn = false
+
+getUserName.addEventListener("keyup",(event) =>{
+    const value =event.target.value.toLowerCase();
+    errorPlace.innerHTML="";
+    if (value.length>8){
+        const errorTitle = 'Username must be less than 8';
+        const errorMessage = document.createElement('h2');
+        errorMessage.innerText=errorTitle;
+        errorMessage.classList.add('error')
+        errorPlace.appendChild(errorMessage);
+        errorLogIn = true
+        logInBtn.style.display='none'
+    }else{
+        logInBtn.style.display='block'
+    }
+});
 
 const onLoadCheck =()=> {
     for(i=0;i<userData.length;i++){
@@ -50,6 +40,38 @@ const onLoadCheck =()=> {
 }
 
 onLoadCheck()
+
+
+
+
+const login = () => {
+    for(i=0;i<userData.length;i++){
+        errorPlace.innerHTML="";
+        if(getUserName.value==userData[i].username&&getUserPassword.value==userData[i].password){
+            logInPage.classList.toggle('login');
+            localStorage.setItem('Username',getUserName.value);
+            localStorage.setItem('Password',getUserPassword.value);
+            localStorage.setItem('userEmail',userData[i].email);
+            localStorage.setItem('phone',userData[i].phone);
+            localStorage.setItem('profileImage',userData[i].img);
+            localStorage.setItem('name',userData[i].name)
+            location.href = "profile.html";
+            return;
+        }else{
+            const errorTitle = 'Username or Password is Incorrect';
+            const errorMessage = document.createElement('h2');
+            errorMessage.innerText=errorTitle;
+            errorMessage.classList.add('error')
+            errorPlace.appendChild(errorMessage);
+        }
+    }
+    
+    getUserName.value="";
+    getUserPassword.value="";
+    
+}
+
+logInBtn.addEventListener('click',login);
 
 const onLoadCheck2 = () =>{
     const profilePictureContainer = document.getElementsByClassName('profile_img_container')[0];
@@ -68,7 +90,7 @@ const onLoadCheck2 = () =>{
     profilePicture.src = localProfileImage;
     profilePicture.classList.add("profile_img");
     profilePictureContainer.appendChild(profilePicture);
-
+    //it only use in profile.html page so in other pages it will up an error
     
     const profileName = document.createElement('h3');
     profileName.innerText=localName;
@@ -86,34 +108,11 @@ const onLoadCheck2 = () =>{
     profileInfoContainer.appendChild(profilePhone);
 }
 
-
-const login = () => {
-    for(i=0;i<userData.length;i++){
-        errorPlace.innerHTML="";
-        if(getUserName.value==userData[i].username&&getUserPassword.value==userData[i].password){
-            logInPage.classList.toggle('login');
-            window.localStorage.setItem('Username',getUserName.value);
-            window.localStorage.setItem('Password',getUserPassword.value);
-            window.localStorage.setItem('userEmail',userData[i].email);
-            window.localStorage.setItem('phone',userData[i].phone);
-            window.localStorage.setItem('profileImage',userData[i].img);
-            window.localStorage.setItem('name',userData[i].name)
-            return;
-        }else{
-            const errorTitle = 'Username or Password is Incorrect';
-            const errorMessage = document.createElement('h2');
-            errorMessage.innerText=errorTitle;
-            errorMessage.classList.add('error')
-            errorPlace.appendChild(errorMessage);
-        }
-    }
-    
-    getUserName.value="";
-    getUserPassword.value="";
-    
-}
-
-logInBtn.addEventListener('click',login);
-
-
 onLoadCheck2()
+
+const logOutBtn = document.getElementsByClassName('logOut')[0];
+
+logOutBtn.addEventListener('click',()=>{
+    localStorage.clear()
+    window.location.href = "profile.html";
+})
