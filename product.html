@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/product.css">
-    <title>Products</title>
+    <script src="https://kit.fontawesome.com/fc310a5a19.js" crossorigin="anonymous"></script>
+    <script src="js/mock_data.js"></script>
+    <title>BlackMark Online Shop/Products</title>
 </head>
 <body>
     
@@ -30,9 +32,15 @@
         </div>
         <nav class="menu_container">
             <ul class="menu">
-                <li><a href="home_page.html" class="menu_item">Home</a></li>
-                <li><a href="profile.html" class="menu_item">Profile</a><span>0</span></li>
-                <li><a href="product.html" class="menu_item">Products</a></li>
+                <li>
+                    <a href="home_page.html" class="menu_item">Home</a>
+                </li>
+                <li>
+                    <a href="profile.html" class="menu_item">Profile <img class="cart_png" src="image/common/cart.png" alt="cart"><span class="cart_number">0</span></a>
+                </li>
+                <li>
+                    <a href="product.html" class="menu_item">Products</a>
+                </li>
             </ul>
             <img src="image/common/menu.png" alt="menu" id="toggleIcon" onclick="menuToggle()" class="menu2" >
             <div id="menu_overlay">
@@ -47,18 +55,34 @@
     <!--for sarch bar-->
 
     <div class="search_bar">
+        <button class="catagories_btn" ><i class="fas fa-th"></i></button>
         <input type="text" class="searchProducts" placeholder="Search Products">
+        <button class="search_btn" >Search</button>
+    </div>
+
+    <!--for catagories button-->
+
+    <div class="catagories_container">
+        <button class="boy_catagories" >Boy</button>
+        <button class="girl_catagories" >Girl</button>
+        <button class="shoes_catagories" >Shoes</button>
+        <button class="watch_catagories" >Watch</button>
+        <button class="phone_catagories" >Phone</button>
+        <button class="tablet_catagories" >Tablet</button>
+        <button class="pc_catagories" >Pc</button>
     </div>
 
     <!--for show products-->
-
     <section class="product_container">
         <!--to append searched products-->
     </section>
 
     
+    
+
     <script src="js/common.js" ></script>
-    <script src="js/login.js" ></script>
-    <script src="js/product.js" type="text/javascript"></script>
+    <script src="js/login.js"></script>
+    <script src="js/product.js" ></script>
+    <script src="js/cart.js"></script>
 </body>
 </html>
