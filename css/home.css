@@ -6,7 +6,7 @@
 }
 
 
-/*for banner to line 83*/
+/*for banner*/
 
 .banner{
     height: auto;
@@ -28,18 +28,18 @@
 .banner_img{
     width: 100%;
     height: 100%;
-    animation: bannerImgAnimate 20000ms infinite;
+    animation: bannerImgAnimate 15000ms infinite;
 }
 
 @keyframes bannerImgAnimate{
     0%{
-        transform:rotateZ(15deg) ;
+        transform:rotateZ(18deg) ;
     }
     50%{
         transform: rotateZ(0deg);
     }
     100%{
-        transform:rotateZ(15deg)
+        transform:rotateZ(18deg)
     }
 }
 
@@ -85,7 +85,7 @@
     }
 }
 
-/*for catagories picture to line 109*/
+/*for catagories picture*/
 
 .catagories_container{
     margin: 70px 0px;
@@ -182,8 +182,8 @@
 }
 
 .fas{
-    color: #feb326;
-}
+  color: #feb326;
+}/*for rating star*/
 
 @media only screen and (max-width:900px){
     .customer{

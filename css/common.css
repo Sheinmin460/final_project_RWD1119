@@ -117,6 +117,12 @@ li {
     }
 }
 
+.cart_number{
+    color:red;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 3px;
+}
+
 /*for hambagar menu*/
 
 #menu_overlay{
@@ -183,8 +189,7 @@ li {
 }
 
 
-
-/*for products to line 212*/
+/*for products item*/
 .card{
     width: 250px;
     height: auto;
@@ -195,9 +200,6 @@ li {
     transform: scale(1);
 }
 
-.card:hover{
-    transform: scale(1.01);
-}
 
 .card-img-top{
     width: 100%; 
@@ -214,20 +216,44 @@ li {
     background-color:#FEB326 ;
     border-bottom-left-radius:15px ;
     border-bottom-right-radius:15px ;
-    height: 60px;
+    height: 80px;
     padding: 20px;
 }
 
 .card-text1{
     font-size: 17px;
+    cursor: default;
 }
 
 .card-text2{
     font-size: 16px;
     font-weight: 900;
+    cursor: default;
 }
 
-/*for log in page to line 283*/
+.add_to_cart{
+    width: 60px;
+    height: 30px;
+    color: #000;
+    background-color: white;
+    border-radius: 15px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:default;
+}
+
+.add_to_cart:hover{
+    transform: scale(1.1);
+}
+
+.add_to_cart h3{
+    font-size: 10px;
+    cursor:progress;
+}
+
+/*for log in page*/
 
 .log_in_page{
     position: fixed;
@@ -250,6 +276,10 @@ li {
     transform: scale(0);
 }
 
+.error_place{
+    height: 30px;
+}
+
 .error{
     color: red;
     font-size: 15px;
@@ -257,6 +287,9 @@ li {
     font-family: 'Roboto','Poppins', sans-serif;
 }
 
+.error_btn{
+    transform: scale(0);
+}
 
 #username{
     width: 300px;
@@ -267,7 +300,7 @@ li {
     outline: none;
     margin-bottom: 20px;
     font-size:20px ;
-    font-family: sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
 
 #password{
@@ -279,7 +312,7 @@ li {
     outline: none;
     margin-bottom: 20px;
     font-size:20px ;
-    font-family: sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
 
 #logInBtn{
@@ -289,5 +322,11 @@ li {
     background-color:#FEB326;
     border: none;
     font-size:20px ;
-    font-family: sans-serif;
+    font-family: 'Roboto',sans-serif;
+}
+
+/*add cart png*/
+.cart_png{
+    width: 20px;
+    height: 20px;
 }

@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    font-family: 'Roboto','Poppins', sans-serif;
+}
+/*for card number input page*/
+.vaild_error{
+    height: 30px;
+}
+
+.container{
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    background-color: #F4B3B1;
+}
+
+input{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.visa_card_input,.card_holder_input{
+    width: 260px;
+    height: 25px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: none;
+    outline:none;
+}
+
+.cvc1{
+    width: 70px;
+    height: 25px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: none;
+    outline:none;
+}
+
+.vaild_error_message{
+    color: #ff0000;
+    font-size: 13px;
+}
+
+.vaild_message{
+    color: #00ff00;
+    font-size: 13px;
+}
+
+.pay_btn{
+    width: 200px;
+    height: 40px;
+    background-color: #FEB326;
+    border: none;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.pay_btn:hover{
+    background-color: #f19813;
+    transform: scale(1.05);
+}
+/*for loading page*/
+.loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    background-color: #F4B3B1;
+}
+
+.loading_active{
+    display:flex;
+}
+
+.progress_heading{
+    animation: headingProgress 15s ease-in-out;
+}
+
+@-webkit-keyframes headingProgress{
+    0%{
+       opacity: 1;
+    }
+    20%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes headingProgress{
+    0%{
+       opacity: 1;
+    }
+    20%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.imgcontainer{
+    width: 70px;
+    height: 70px;
+    margin: 40px;
+}
+
+.imgcontainer img{
+    width: 100%;
+    animation: imgProgress 15s ease-in-out;
+}
+
+
+@-webkit-keyframes imgProgress{
+    0%{
+       transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(1800deg);
+    }
+}
+
+@keyframes imgProgress{
+    0%{
+        transform: rotateZ(0deg);
+     }
+     100%{
+         transform: rotateZ(1800deg);
+     }
+}
+/*Show receipt page*/
+.payment_receipt{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display:none;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    background-color: #F4B3B1;
+}
+
+.payment_receipt_active{
+    display: flex;
+}
+
+.receipt_container{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FEB326;
+    padding: 20px;
+}
+
+.receipt_head{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.receipt_paragraph{
+    font-size: 20px;
+    margin: 20px;
+}
+
+.removeLocalData{
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    background-color:#Ffff;
+    border: none;
+    font-size:20px ;
+}
