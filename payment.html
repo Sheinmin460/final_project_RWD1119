@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/payment.css">
+    <script src="js/mock_data.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!--for header-->
+
+    <header class="header">
+        <div class="logocontainer">
+            <img src="image/logo/logo_for_screen_1300px.png" alt="logo" class="logo_for_1300px">
+            <img src="image/logo/logo_for_screen_600px.png" alt="logo" class="logo_for_600px">
+        </div>
+        <nav class="menu_container">
+            <ul class="menu">
+                <li>
+                    <a href="home_page.html" class="menu_item">Home</a>
+                </li>
+                <li>
+                    <a href="profile.html" class="menu_item">Profile <img class="cart_png" src="image/common/cart.png" alt="cart"><span class="cart_number">0</span></a>
+                </li>
+                <li>
+                    <a href="product.html" class="menu_item">Products</a>
+                </li>
+            </ul>
+            <img src="image/common/menu.png" alt="menu" id="toggleIcon" onclick="menuToggle()" class="menu2" >
+            <div id="menu_overlay">
+                <ul>
+                    <li><a href="home_page.html" >Home</a></li>
+                    <li><a href="profile.html" >Profile</a></li>
+                    <li><a href="product.html" >Products</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>   
+    <section class="container">
+        <div class="vaild_error">
+            
+        </div>
+        <input type="number" placeholder="Card Number"  class="visa_card_input">
+        <input type="text" id="Username" placeholder="Card Holder Name" class="card_holder_input">
+        <div class="cvc_container">
+            <input type="number" placeholder="MM" class="month_input cvc1">
+            <input type="number" placeholder="YY" class="year_input cvc1">
+            <input type="number" placeholder="CVC" class="cvc_input cvc1">
+        </div>
+        <button class="pay_btn">pay to</button>
+    </section>
+    <section class="loading">
+        <h3 class="progress_heading">Payment in progress </h3>
+        <div class='imgcontainer'>
+            <img src="image/common/loading.png" alt="loading...">
+        </div>
+    </section>
+    <section class="payment_receipt_container">
+        <div class="payment_receipt">
+            <!--to append receipt-->
+        </div>
+    </section>
+
+    <script src="js/common.js" ></script>
+    <script src="js/payment.js"></script>
+</body>
+</html>
