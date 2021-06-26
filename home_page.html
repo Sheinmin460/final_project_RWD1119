@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/common.css">
     <script src="https://kit.fontawesome.com/fc310a5a19.js" crossorigin="anonymous"></script>
+    <script src="js/mock_data.js"></script>
     <title>BlackMark Online Shop</title>
 </head>
 <body>
@@ -33,9 +32,15 @@
         </div>
         <nav class="menu_container">
             <ul class="menu">
-                <li><a href="home_page.html" class="menu_item">Home</a></li>
-                <li><a href="profile.html" class="menu_item">Profile</a><span>0</span></li>
-                <li><a href="product.html" class="menu_item">Products</a></li>
+                <li>
+                    <a href="home_page.html" class="menu_item">Home</a>
+                </li>
+                <li>
+                    <a href="profile.html" class="menu_item">Profile <img class="cart_png" src="image/common/cart.png" alt="cart"><span class="cart_number">0</span></a>
+                </li>
+                <li>
+                    <a href="product.html" class="menu_item">Products</a>
+                </li>
             </ul>
             <img src="image/common/menu.png" alt="menu" id="toggleIcon" onclick="menuToggle()" class="menu2" >
             <div id="menu_overlay">
@@ -170,10 +175,10 @@
             </section>
             <section class="footer_colum3">
                 <h3 class="footer_header">Follow Us</h3>
-                <a href="">Fcebook</a>
-                <a href="">Instergram</a>
-                <a href="">Twitter</a>
-                <a href="">You Tube</a>
+                <a href="https://www.facebook.com/" target="blank">Fcebook</a>
+                <a href="https://www.instagram.com/" target="blank">Instergram</a>
+                <a href="https://twitter.com/?lang=en" target="blank">Twitter</a>
+                <a href="https://www.youtube.com/" target="blank">You Tube</a>
             </section>
         </div>
         <div class="footer_line">copyright</div>
@@ -184,6 +189,7 @@
 
     <script src="js/common.js" ></script>
     <script src="js/login.js" ></script>
-    <script src="js/home.js" type="text/javascript"></script>
+    <script src="js/home.js" ></script>
+    <script src="js/cart.js"></script>
 </body>
 </html>
